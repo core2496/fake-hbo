@@ -1,0 +1,116 @@
+.embla {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.embla__container {
+  display: flex;
+}
+.bannerSlideContent {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 620px;
+}
+
+.embla__prev {
+  left: 0;
+}
+.embla__next {
+  right: 0;
+}
+
+.embla__prev,
+.embla__next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  filter: brightness(0) invert(1);
+}
+
+.embla__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.embla__next__icon {
+  transform: rotate(180deg);
+}
+
+.embla__prev__icon,
+.embla__next__icon {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+.embla:hover .embla__prev__icon,
+.embla:hover .embla__next__icon {
+  opacity: 0.5;
+  transition: opacity 0.1s ease-in;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+}
+.bannerInfo {
+  padding: 0px 16px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+
+  background: linear-gradient(
+    rgb(0 0 0 / 6%) 0%,
+    rgba(0, 0, 0, 0.5) 25%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 30%;
+}
+.bannerInfoSmall {
+  margin-bottom: 6px;
+  display: block;
+}
+.bannerAction {
+  margin-top: 12px;
+  padding: 10px 24px 11px;
+  border-radius: 8px;
+  background-color: rgba(134, 151, 206, 0.3);
+  outline: none;
+  border: none;
+  color: #cecece;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bannerAction:hover {
+  background-color: rgba(134, 151, 206, 0.5);
+  color: #fff;
+}
+
+.cardSlideContent {
+  height: auto;
+  width: auto;
+  padding: 0px 16px;
+}
+.cardImage {
+  height: 300px;
+  width: 240px;
+}
